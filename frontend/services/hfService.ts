@@ -1,5 +1,5 @@
-import { WallpaperTypeDetails } from "../../constants";
-import { WallpaperType } from "../../types";
+import { WallpaperTypeDetails } from "../constants";
+import { WallpaperType } from "../types";
 
 export const generateWallpaper = async (prompt: string, wallpaperType: string) => {
   const response = await fetch("api/generate", {

@@ -91,7 +91,7 @@ perfect anatomy, smooth shading, soft lighting,
 no realism, no 3d, 2d anime style
 `;
 
-const client = new InferenceClient(process.env.HF_API_TOKEN);
+const client = new InferenceClient(process.env.HF_TOKEN);
 
 export default async function handler(req, res) {
   try {

@@ -29,6 +29,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["./**/*.ts", "./**/*.tsx", "backend/Server.js"],
+  "include": ["./**/*.ts", "./**/*.tsx", "api/generate.js"],
   "exclude": ["frontend/node_modules", "dist"]
 }

@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { WallpaperTypeDetails } from '../../constants';
-import { WallpaperType } from '../../types';
+import { WallpaperTypeDetails } from '../constants';
+import { WallpaperType } from '../types';
 
 interface WallpaperTypeSelectorProps {
   selectedType: WallpaperType;

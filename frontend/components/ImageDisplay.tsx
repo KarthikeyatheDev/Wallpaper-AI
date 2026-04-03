@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { GeneratedImage } from '../../types';
+import { GeneratedImage } from '../types';
 
 interface ImageDisplayProps {
   image: GeneratedImage | null;

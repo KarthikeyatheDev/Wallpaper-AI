@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { PROMPT_PLACEHOLDER } from '../../constants';
+import { PROMPT_PLACEHOLDER } from '../constants';
 
 interface PromptInputProps {
   prompt: string;

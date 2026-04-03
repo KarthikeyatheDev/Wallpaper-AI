@@ -25,10 +25,17 @@ const App: React.FC = () => {
 
     setIsLoading(true);
     setError(null);
+
+    // ✅ Clean up old image URL (important for memory)
+    if (generatedImage?.src) {
+      URL.revokeObjectURL(generatedImage.src);
+    }
+
     setGeneratedImage(null);
 
     try {
-      const { base64Image, mimeType } = await callGenerateWallpaperService(prompt,wallpaperType);
+      // ✅ NEW: get imageUrl instead of base64
+      const { imageUrl } = await callGenerateWallpaperService(prompt, wallpaperType);
 
       const sanitizedPrompt = prompt
         .substring(0, 30)
@@ -37,8 +44,9 @@ const App: React.FC = () => {
 
       const imageName = `anime_wallpaper_${sanitizedPrompt}_${wallpaperType}.png`;
 
+      // ✅ Use blob URL directly
       setGeneratedImage({
-        src: `data:${mimeType};base64,${base64Image}`,
+        src: imageUrl,
         alt: `Anime wallpaper generated for prompt: ${prompt}`,
         filename: imageName,
       });
@@ -54,7 +62,7 @@ const App: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [prompt, wallpaperType]);
+  }, [prompt, wallpaperType, generatedImage]);
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-gray-100">
@@ -76,7 +84,7 @@ const App: React.FC = () => {
             onPromptChange={setPrompt}
             onSubmit={handleGenerateWallpaper}
             isLoading={isLoading}
-            apiKeyAvailable={true} // always true now
+            apiKeyAvailable={true}
           />
 
           <WallpaperTypeSelector

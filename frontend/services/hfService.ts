@@ -2,7 +2,7 @@ import { WallpaperTypeDetails } from "../constants";
 import { WallpaperType } from "../types";
 
 export const generateWallpaper = async (prompt: string, wallpaperType: string) => {
-  const response = await fetch("api/generate", {
+  const response = await fetch("/api/generate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -15,13 +15,12 @@ export const generateWallpaper = async (prompt: string, wallpaperType: string) =
     throw new Error(`AI generation failed: ${errorText}`);
   }
 
-  const data = await response.json();
+  // ✅ FIX: read as blob instead of JSON
+  const blob = await response.blob();
 
-  console.log("SERVICE RESPONSE:", data); // 🔍 debug
+  const imageUrl = URL.createObjectURL(blob);
 
-  // ✅ IMPORTANT: match backend keys
   return {
-    base64Image: data.base64Image,
-    mimeType: data.mimeType || "image/png",
+    imageUrl,
   };
 };

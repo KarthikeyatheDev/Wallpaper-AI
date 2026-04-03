@@ -1,7 +1,7 @@
 
 import { WallpaperType } from './types';
 
-export const APP_TITLE = "Anime Wallpaper AI";
+export const APP_TITLE = "Wallpaper AI";
 export const GEMINI_IMAGE_MODEL = 'imagen-3.0-generate-002';
 
 export const PROMPT_PLACEHOLDER = "e.g., samurai overlooking a neon Tokyo, space explorer discovering alien flora, fantasy knight in a mystical forest...";

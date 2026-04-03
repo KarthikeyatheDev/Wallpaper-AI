@@ -9,7 +9,7 @@ const Header: React.FC = () => {
         <h1 className="text-3xl sm:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-500 tracking-wider">
           {APP_TITLE}
         </h1>
-        <p className="text-center text-indigo-300 mt-1 text-sm sm:text-base">Craft your perfect anime scene with AI</p>
+        <p className="text-center text-indigo-300 mt-1 text-sm sm:text-base">Craft your perfect wallpaper with AI</p>
       </div>
     </header>
   );

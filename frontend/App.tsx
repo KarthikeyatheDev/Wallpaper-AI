@@ -42,12 +42,12 @@ const App: React.FC = () => {
         .replace(/[^a-zA-Z0-9]/g, '_')
         .replace(/_{2,}/g, '_');
 
-      const imageName = `anime_wallpaper_${sanitizedPrompt}_${wallpaperType}.png`;
+      const imageName = `wallpaper_${sanitizedPrompt}_${wallpaperType}.png`;
 
       // ✅ Use blob URL directly
       setGeneratedImage({
         src: imageUrl,
-        alt: `Anime wallpaper generated for prompt: ${prompt}`,
+        alt: `Wallpaper generated for prompt: ${prompt}`,
         filename: imageName,
       });
 
@@ -105,7 +105,7 @@ const App: React.FC = () => {
                 Ready to create some magic? ✨
               </p>
               <p className="text-gray-400 mt-2 text-sm">
-                Type your dream anime scene, pick a format, and let the AI bring it to life!
+                Type your dream  scene, pick a format, and let the AI bring it to life!
               </p>
             </div>
           )}

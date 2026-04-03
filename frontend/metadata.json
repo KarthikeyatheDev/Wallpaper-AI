@@ -1,5 +1,5 @@
 {
-  "name": "Anime Wallpaper AI",
-  "description": "A web application that uses AI to generate custom anime-style wallpapers based on user prompts and selected aspect ratios (mobile or desktop).",
+  "name": "Wallpaper AI",
+  "description": "A web application that uses AI to generate custom-style wallpapers based on user prompts and selected aspect ratios (mobile or desktop).",
   "requestFramePermissions": []
 }

@@ -11,11 +11,11 @@
 // app.use(express.json());
 
 // const systemPrompt = `
-// masterpiece, best quality, ultra detailed, anime illustration,
-// clean line art, sharp outlines, vibrant anime colors,
-// studio anime style, highly detailed face and eyes,
+// masterpiece, best quality, ultra detailed, illustration,
+// clean line art, sharp outlines, vibrant colors,
+// realistic style, highly detailed face and eyes,
 // perfect anatomy, smooth shading, soft lighting,
-// no realism, no 3d, 2d anime style
+// no realism, no 3d, 2d style
 // `;
 
 // // ✅ Initialize HF client
@@ -75,7 +75,7 @@
 //   }
 // });
 // app.get("/", (req, res) => {
-//   res.send("✅ Anime Generator Backend Running");
+//   res.send("✅ Wallpaper Generator Backend Running");
 // });
 
 // app.listen(3000, () => {
@@ -84,11 +84,11 @@
 import { InferenceClient } from "@huggingface/inference";
 
 const systemPrompt = `
-masterpiece, best quality, ultra detailed, anime illustration,
-clean line art, sharp outlines, vibrant anime colors,
-studio anime style, highly detailed face and eyes,
+masterpiece, best quality, ultra detailed, illustration,
+clean line art, sharp outlines, vibrant colors,
+studio style, highly detailed face and eyes,
 perfect anatomy, smooth shading, soft lighting,
-no realism, no 3d, 2d anime style
+no realism, no 3d, 2d style
 `;
 
 const client = new InferenceClient(process.env.HF_TOKEN);

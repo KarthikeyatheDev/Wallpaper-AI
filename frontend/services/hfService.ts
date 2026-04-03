@@ -2,7 +2,7 @@ import { WallpaperTypeDetails } from "../../constants";
 import { WallpaperType } from "../../types";
 
 export const generateWallpaper = async (prompt: string, wallpaperType: string) => {
-  const response = await fetch("api/generate", {
+  const response = await fetch("frontend/api/generate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
